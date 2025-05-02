@@ -51,9 +51,10 @@ h1 {
 
 .cars-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   margin: 2rem 0rem;
+  gap: 2rem;
 }
 
 .card {
