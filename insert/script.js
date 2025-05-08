@@ -6,6 +6,8 @@ const descriptionInput = document.getElementById("description");
 const locationInput = document.getElementById("location");
 const message = document.getElementById("message");
 
+const imageRegex = /^https?:\/\/.*\.(jpg|jpeg|png|gif|bmp|webp|svg)$/i;
+
 const insertCar = async (data) => {
   const response = await fetch(
     "https://6810691f27f2fdac241140f8.mockapi.io/cars",
@@ -24,7 +26,7 @@ const insertCar = async (data) => {
 addBtn.addEventListener("click", async () => {
   const data = {
     title: titleInput.value,
-    price: +priceInput.value,
+    price: priceInput.value,
     imgUrl: imgInput.value,
     description: descriptionInput.value,
     location: locationInput.value,
@@ -33,6 +35,12 @@ addBtn.addEventListener("click", async () => {
   if (isNaN(data.price)) {
     message.classList.add("red");
     message.textContent = "Please insert price in numbers";
+    return;
+  }
+
+  if (!imageRegex.test(data.imgUrl)) {
+    message.textContent = "Please enter a valid image URL";
+    message.classList.add("red");
     return;
   }
 

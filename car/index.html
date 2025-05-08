@@ -10,6 +10,7 @@
     <div class="page-wrapper">
       <header>
         <div class="logo">Tomas Cars</div>
+
         <img class="header-svg" src="../images/car-svgrepo-com.svg" alt="" />
         <nav>
           <ul>
@@ -23,21 +24,18 @@
         </nav>
       </header>
       <main>
-        <h1>Add Car</h1>
-        <div id="form" class="form">
-          <input id="title" type="text" placeholder="title" />
-          <input id="price" type="text" placeholder="price" />
-          <input id="imgurl" type="text" placeholder="imgUrl" />
-          <textarea
-            type="text"
-            id="description"
-            placeholder="description"
-          ></textarea>
-          <input id="location" type="text" placeholder="location" />
-          <button class="add-btn" id="add-btn">Add Car</button>
-          <h3 class="message" id="message"></h3>
+        <div class="left-div">
+          <h1 id="title"></h1>
+          <p id="description"></p>
+          <p class="price" id="price"></p>
+          <p class="location" id="location"></p>
+          <button class="delete-btn" id="delete-btn">Delete</button>
+        </div>
+        <div class="right-div">
+          <img class="car-img" id="img" alt="" />
         </div>
       </main>
+      <h3 class="message" id="message"></h3>
     </div>
 
     <script src="./script.js"></script>

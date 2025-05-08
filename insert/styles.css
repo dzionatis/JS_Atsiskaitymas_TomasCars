@@ -27,6 +27,11 @@ header {
   font-weight: 700;
 }
 
+.header-svg {
+  width: 100px;
+  height: 100px;
+}
+
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -94,4 +99,20 @@ h1 {
 
 .green {
   color: green;
+}
+
+/* TABLET VERSION---------------------- */
+
+@media only screen and (max-width: 1024px) {
+  .cars-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* PHONE VERSION -------------------- */
+
+@media only screen and (max-width: 767px) {
+  .header-svg {
+    display: none;
+  }
 }

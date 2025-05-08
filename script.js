@@ -11,7 +11,10 @@ const fetchCars = async () => {
 
 const buildCards = (data) => {
   data.forEach((d) => {
-    const card = document.createElement("div");
+    const card = document.createElement("a");
+
+    card.href = `./car/index.html?id=${d.id}`;
+
     card.classList.add("card");
 
     const title = document.createElement("h2");
